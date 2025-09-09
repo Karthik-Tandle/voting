@@ -54,9 +54,10 @@ input  wire       ena,     // enable
     // Winner combinational logic with tie detection
     //-----------------------------------------
     reg [3:0] winner_next;
-    always @(*) begin
-        reg [7:0] max_cnt;
+    reg [7:0] max_cnt;
         reg [1:0] idx;
+    always @(*) begin
+        
         integer tie_count;
 
         // Find max count and its index
